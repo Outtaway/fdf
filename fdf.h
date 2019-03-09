@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kpshenyc <kpshenyc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:20:05 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/09 20:08:53 by kpshenyc         ###   ########.fr       */
+/*   Updated: 2019/03/10 00:36:45 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,41 @@
 # define GREEN 0x00FF00
 # define BLUE 0x0000FF
 
-# define WIN_WIDTH 1920
-# define WIN_HEIGHT 1080
+# define WIN_WIDTH 1500
+# define WIN_HEIGHT 800
+
+# ifdef __linux__
+#  define ESC 65307
+#  define NUM4 65430
+#  define NUM8 65431
+#  define NUM6 65432
+#  define NUM2 65433
+#  define MINUS 45
+#  define PLUS 61
+#  define LEFT_ARROW 65361
+#  define RIGHT_ARROW 65363
+#  define UP_ARROW 65362
+#  define DOWN_ARROW 65364
+# elif
+#  define ESC 63
+#  define NUM4 86
+#  define NUM8 91
+#  define NUM6 88
+#  define NUM2 84
+#  define MINUS 27
+#  define PLUS 24
+#  define LEFT_ARROW 123
+#  define RIGHT_ARROW 124
+#  define UP_ARROW 126
+#  define DOWN_ARROW 125
+# endif
+
+# define SHIFT_STEP 15
+# define ROTATE_STEP 10
 
 # define _2DPOINT(x_, y_) (t_point_2d){.x = x_, .y = y_}
-# define TO_RAD(angle) ((double)((double)(angle) * M_PI / 180.0))
+# define TO_RAD(angle) ((double)((double)(angle) * acos(-1.0f) / 180.0))
+
 typedef struct		s_point_2d
 {
 	int32_t			x;
@@ -35,9 +65,9 @@ typedef struct		s_point_2d
 
 typedef struct		s_point_3d
 {
-	int32_t			x;
-	int32_t			y;
-	int32_t			z;
+	double			x;
+	double			y;
+	double			z;
 }					t_point_3d;
 
 typedef struct		s_cell

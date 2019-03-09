@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kpshenyc <kpshenyc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 14:04:33 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/09 19:48:14 by kpshenyc         ###   ########.fr       */
+/*   Updated: 2019/03/10 00:14:51 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,8 @@ void		init_fdf(t_fdf *fdf)
 			fdf->transformed_map[i][j].z = fdf->map[i][j].z;
 		}
 	}
-	fdf->shift_x = 700;
-	fdf->shift_y = 400;
+	fdf->shift_x = 500;
+	fdf->shift_y = 200;
 	fdf->z_modif = 0;
 }
 

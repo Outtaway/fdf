@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kpshenyc <kpshenyc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 14:42:15 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/07 14:12:06 by kpshenyc         ###   ########.fr       */
+/*   Updated: 2019/03/09 22:47:24 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "../libft/libft.h"
 # include "../gnl/get_next_line.h"
 # include <stdarg.h>
+# include <stdint.h>
 
 # define PROC 0
 # define CHAR 1
@@ -61,8 +62,6 @@
 # define __ERR_STATE(st) if(st == -1) { return (-1); }
 # define __ERR_STATE_CL(st, i) if(st == -1) { *i = 0; return (-1); }
 # define __ERR_STATE_FREE(st, it) if (st == -1) { free(it); return (-1); }
-
-# pragma pack(1)
 
 typedef char	t_byte;
 typedef t_byte*	t_byte_seq;

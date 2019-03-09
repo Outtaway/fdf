@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotations.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kpshenyc <kpshenyc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/09 16:10:37 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/09 20:06:25 by kpshenyc         ###   ########.fr       */
+/*   Updated: 2019/03/10 00:27:51 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int8_t		rotate_x(t_fdf *fdf)
 		j = -1;
 		while (++j < fdf->map_width)
 		{
-			prev_y = fdf->transformed_map[i][j].y;
+			prev_y = fdf->transformed_map[i][j].y - fdf->map_height / 2;
 			prev_z = fdf->transformed_map[i][j].z;
 			fdf->transformed_map[i][j].y = prev_y * cos(TO_RAD(fdf->x_rotate)) + prev_z * sin(TO_RAD(fdf->x_rotate));
 			fdf->transformed_map[i][j].z = -prev_y * sin(TO_RAD(fdf->x_rotate)) + prev_z * cos(TO_RAD(fdf->x_rotate));
@@ -49,7 +49,7 @@ int8_t		rotate_y(t_fdf *fdf)
 		j = -1;
 		while (++j < fdf->map_width)
 		{
-			prev_x = fdf->transformed_map[i][j].x;
+			prev_x = fdf->transformed_map[i][j].x - fdf->map_width / 2;
 			prev_z = fdf->transformed_map[i][j].z;
 			fdf->transformed_map[i][j].x = prev_x * cos(TO_RAD(fdf->y_rotate)) + prev_z * sin(TO_RAD(fdf->y_rotate));
 			fdf->transformed_map[i][j].z = -prev_x * sin(TO_RAD(fdf->y_rotate)) + prev_z * cos(TO_RAD(fdf->y_rotate));
