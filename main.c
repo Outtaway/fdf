@@ -6,7 +6,7 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:20:35 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 00:31:55 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/10 00:52:16 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,7 @@ int		main(int ac, char **av)
 	read_map(av[1], &fdf);
 	fdf.mlx = mlx_init();
 	fdf.win = mlx_new_window(fdf.mlx, WIN_WIDTH, WIN_HEIGHT, "FDF");
-	mlx_key_hook(fdf.win, exit_func, &fdf);
+	mlx_hook(fdf.win, 2, 5, exit_func, &fdf);
 	rotate_x(&fdf);
 	rotate_y(&fdf);
 	rotate_z(&fdf);
