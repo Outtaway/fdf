@@ -6,7 +6,7 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/09 16:10:37 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 00:27:51 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/10 00:56:01 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ int8_t		rotate_x(t_fdf *fdf)
 	double		prev_z;
 
 	i = -1;
-	double shit = TO_RAD(fdf->x_rotate);
-	ft_printf("%f\n", shit);
 	while (++i < fdf->map_height)
 	{
 		j = -1;
@@ -66,8 +64,6 @@ int8_t		rotate_z(t_fdf *fdf)
 	double		prev_y;
 
 	i = -1;
-	double shit = TO_RAD(fdf->z_rotate);
-	ft_printf("%f\n", shit);
 	while (++i < fdf->map_height)
 	{
 		j = -1;

@@ -6,7 +6,7 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 14:04:33 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 00:14:51 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/10 01:03:19 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,14 +73,14 @@ void		init_fdf(t_fdf *fdf)
 		{
 			fdf->map[i][j].x = j;
 			fdf->map[i][j].y = i;
-			fdf->transformed_map[i][j].y = fdf->map[i][j].x;
-			fdf->transformed_map[i][j].x = fdf->map[i][j].y;
+			fdf->transformed_map[i][j].x = fdf->map[i][j].x;
+			fdf->transformed_map[i][j].y = fdf->map[i][j].y;
 			fdf->transformed_map[i][j].z = fdf->map[i][j].z;
 		}
 	}
-	fdf->shift_x = 500;
-	fdf->shift_y = 200;
-	fdf->z_modif = 0;
+	fdf->shift_x = WIN_WIDTH / 2;
+	fdf->shift_y = WIN_HEIGHT / 2;
+	fdf->z_modif = 5;
 }
 
 void		read_map(char *file_name, t_fdf *fdf)

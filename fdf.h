@@ -6,7 +6,7 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:20:05 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 00:39:14 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/10 01:00:57 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@
 #  define DOWN_ARROW 125
 # endif
 
-# define SHIFT_STEP 15
+# define SHIFT_STEP 5
 # define ROTATE_STEP 2
 
 # define _2DPOINT(x_, y_) (t_point_2d){.x = x_, .y = y_}
