@@ -6,7 +6,7 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:20:05 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 00:36:45 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/10 00:39:14 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@
 # endif
 
 # define SHIFT_STEP 15
-# define ROTATE_STEP 10
+# define ROTATE_STEP 2
 
 # define _2DPOINT(x_, y_) (t_point_2d){.x = x_, .y = y_}
 # define TO_RAD(angle) ((double)((double)(angle) * acos(-1.0f) / 180.0))
