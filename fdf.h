@@ -6,7 +6,7 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:20:05 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 01:00:57 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/10 13:05:53 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 # define RED 0xFF0000
 # define GREEN 0x00FF00
 # define BLUE 0x0000FF
+# define WHITE 0xFFFFFF
+# define MAX_COLORS 4
 
 # define WIN_WIDTH 1500
 # define WIN_HEIGHT 800
@@ -37,6 +39,7 @@
 #  define RIGHT_ARROW 65363
 #  define UP_ARROW 65362
 #  define DOWN_ARROW 65364
+#  define C_KEY 99
 # elif
 #  define ESC 63
 #  define NUM4 86
@@ -49,6 +52,7 @@
 #  define RIGHT_ARROW 124
 #  define UP_ARROW 126
 #  define DOWN_ARROW 125
+#  define C_KEY 8
 # endif
 
 # define SHIFT_STEP 5

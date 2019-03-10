@@ -6,7 +6,7 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 14:04:33 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 01:03:19 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/10 12:47:14 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,19 +103,4 @@ void		read_map(char *file_name, t_fdf *fdf)
 	fdf->map = (t_point_3d **)malloc(sizeof(t_point_3d *) * fdf->map_height);
 	fill_map(fdf, fdf->map + fdf->map_height - 1, file);
 	init_fdf(fdf);
-	// rotate_x(fdf);
-	// rotate_y(fdf);
-	// rotate_z(fdf);
-	// int i = 0;
-	// while (i < fdf->map_height)
-	// {
-	// 	int j = 0;
-	// 	while (j < fdf->map_width)
-	// 	{
-	// 		ft_printf("%3d", fdf->map[i][j].value);
-	// 		++j;
-	// 	}
-	// 	ft_printf("\n");
-	// 	++i;
-	// }
 }

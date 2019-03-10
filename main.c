@@ -6,11 +6,14 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:20:35 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 01:05:14 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/10 13:09:17 by konstantin       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+int32_t		g_colors[4] = { WHITE, RED, GREEN, BLUE };
+int32_t		g_color = 0;
 
 void	draw_line(t_point_2d start, t_point_2d end, t_fdf *fdf)
 {
@@ -22,7 +25,7 @@ void	draw_line(t_point_2d start, t_point_2d end, t_fdf *fdf)
 
 	while(start.x != end.x || start.y != end.y) 
 	{
-		mlx_pixel_put(fdf->mlx, fdf->win, start.x, start.y, GREEN);
+		mlx_pixel_put(fdf->mlx, fdf->win, start.x, start.y, g_colors[g_color]);
 		const int error2 = error * 2;
 		if(error2 > -deltaY) 
 		{
@@ -88,37 +91,46 @@ int8_t	isometric_proj(t_fdf *fdf)
 
 int		exit_func(int key, void *param)
 {
-	int8_t		redraw;
+	int8_t				redraw;
+	t_fdf				*fdf;
 
+	fdf = (t_fdf *)param;
 	redraw = 0;
 	copy_map((t_fdf *)param);
 	ft_printf("%d\n", key);
 	if (key == ESC)
 		exit(EXIT_SUCCESS);
 	else if (key == NUM8)
-		(redraw = 1) && ((((t_fdf *)param)->x_rotate) += ROTATE_STEP);
+		(redraw = 1) && (fdf->x_rotate += ROTATE_STEP);
 	else if (key == NUM2)
-		(redraw = 1) && ((((t_fdf *)param)->x_rotate) -= ROTATE_STEP);
+		(redraw = 1) && (fdf->x_rotate -= ROTATE_STEP);
 	else if (key == NUM6)
-		(redraw = 1) && ((((t_fdf *)param)->y_rotate) += ROTATE_STEP);
+		(redraw = 1) && (fdf->y_rotate += ROTATE_STEP);
 	else if (key == NUM4)
-		(redraw = 1) && ((((t_fdf *)param)->y_rotate) -= ROTATE_STEP);
+		(redraw = 1) && (fdf->y_rotate -= ROTATE_STEP);
 	else if (key == LEFT_ARROW)
-		(redraw = 1) && ((((t_fdf *)param)->shift_x) -= SHIFT_STEP);
+		(redraw = 1) && (fdf->shift_x -= SHIFT_STEP);
 	else if (key == RIGHT_ARROW)
-		(redraw = 1) && ((((t_fdf *)param)->shift_x) += SHIFT_STEP);
+		(redraw = 1) && (fdf->shift_x += SHIFT_STEP);
 	else if (key == UP_ARROW)
-		(redraw = 1) && ((((t_fdf *)param)->shift_y) -= SHIFT_STEP);
+		(redraw = 1) && (fdf->shift_y -= SHIFT_STEP);
 	else if (key == DOWN_ARROW)
-		(redraw = 1) && ((((t_fdf *)param)->shift_y) += SHIFT_STEP);
+		(redraw = 1) && (fdf->shift_y += SHIFT_STEP);
 	else if (key == PLUS)
-		(redraw = 1) && ((((t_fdf *)param)->scale) += 5);
+		(redraw = 1) && (fdf->scale += 5);
 	else if (key == MINUS)
-		((((t_fdf *)param)->scale) > 5) && (redraw = 1) && ((((t_fdf *)param)->scale) -= 5);
+		(fdf->scale) > 5 && (redraw = 1) && (fdf->scale -= 5);
+	else if (key == C_KEY)
+	{
+		++g_color;
+		if (g_color > MAX_COLORS - 1)
+			g_color = 0;
+		redraw = 1;
+	}
 	else if (key == 6)
 		((t_fdf *)param)->z_modif += 5;
 	else if (key == 7)
-		((t_fdf *)param)->z_modif -= 5;	
+		((t_fdf *)param)->z_modif -= 5;
 	if (redraw)
 	{
 		rotate_x((t_fdf *)param);
