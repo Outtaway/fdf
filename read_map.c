@@ -71,11 +71,13 @@ void		init_fdf(t_fdf *fdf)
 
 	i = -1;
 	fdf->scale = 30;
-	fdf->trans_map = (t_point_3d **)malloc(sizeof(t_point_3d *) * fdf->map_height);
+	fdf->trans_map = (t_point_3d **)malloc(sizeof(t_point_3d *) *
+	fdf->map_height);
 	while (++i < fdf->map_height)
 	{
 		j = -1;
-		fdf->trans_map[i] = (t_point_3d *)malloc(sizeof(t_point_3d) * fdf->map_width);
+		fdf->trans_map[i] = (t_point_3d *)malloc(sizeof(t_point_3d) *
+		fdf->map_width);
 		while (++j < fdf->map_width)
 		{
 			fdf->map[i][j].x = j;
