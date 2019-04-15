@@ -6,7 +6,7 @@
 /*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:20:35 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 13:09:17 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/04/01 19:20:57 by kpshenyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,9 +133,9 @@ int		exit_func(int key, void *param)
 		((t_fdf *)param)->z_modif -= 5;
 	if (redraw)
 	{
-		rotate_x((t_fdf *)param);
-		rotate_y((t_fdf *)param);
-		rotate_z((t_fdf *)param);
+		//rotate_x((t_fdf *)param);
+		//rotate_y((t_fdf *)param);
+		//rotate_z((t_fdf *)param);
 		isometric_proj((t_fdf *)param);
 		mlx_clear_window(((t_fdf *)param)->mlx, ((t_fdf *)param)->win);
 		draw_map((t_fdf *)param);
@@ -143,6 +143,12 @@ int		exit_func(int key, void *param)
 	return (EXIT_SUCCESS);
 }
 
+int ss(void *param)
+{
+	system("leaks fdf");
+	exit(0);
+	return (0);
+}
 
 int		main(int ac, char **av)
 {
@@ -157,6 +163,7 @@ int		main(int ac, char **av)
 	fdf.mlx = mlx_init();
 	fdf.win = mlx_new_window(fdf.mlx, WIN_WIDTH, WIN_HEIGHT, "FDF");
 	mlx_hook(fdf.win, 2, 5, exit_func, &fdf);
+	mlx_hook(fdf.win, 17, 5, ss, &fdf);
 	rotate_x(&fdf);
 	rotate_y(&fdf);
 	rotate_z(&fdf);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: konstantin <konstantin@student.42.fr>      +#+  +:+       +#+        */
+/*   By: kpshenyc <kpshenyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:20:05 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/10 13:05:53 by konstantin       ###   ########.fr       */
+/*   Updated: 2019/03/11 09:49:27 by kpshenyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 #  define UP_ARROW 65362
 #  define DOWN_ARROW 65364
 #  define C_KEY 99
-# elif
+# else
 #  define ESC 63
 #  define NUM4 86
 #  define NUM8 91
