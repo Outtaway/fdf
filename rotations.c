@@ -25,10 +25,12 @@ int8_t		rotate_x(t_fdf *fdf)
 		j = -1;
 		while (++j < fdf->map_width)
 		{
-			prev_y = fdf->transformed_map[i][j].y - fdf->map_height / 2;
-			prev_z = fdf->transformed_map[i][j].z;
-			fdf->transformed_map[i][j].y = prev_y * cos(TO_RAD(fdf->x_rotate)) + prev_z * sin(TO_RAD(fdf->x_rotate));
-			fdf->transformed_map[i][j].z = -prev_y * sin(TO_RAD(fdf->x_rotate)) + prev_z * cos(TO_RAD(fdf->x_rotate));
+			prev_y = fdf->trans_map[i][j].y - fdf->map_height / 2;
+			prev_z = fdf->trans_map[i][j].z;
+			fdf->trans_map[i][j].y = prev_y * cos(TO_RAD(fdf->x_rotate))
+			+ prev_z * sin(TO_RAD(fdf->x_rotate));
+			fdf->trans_map[i][j].z = -prev_y * sin(TO_RAD(fdf->x_rotate))
+			+ prev_z * cos(TO_RAD(fdf->x_rotate));
 		}
 	}
 	return (1);
@@ -47,10 +49,12 @@ int8_t		rotate_y(t_fdf *fdf)
 		j = -1;
 		while (++j < fdf->map_width)
 		{
-			prev_x = fdf->transformed_map[i][j].x - fdf->map_width / 2;
-			prev_z = fdf->transformed_map[i][j].z;
-			fdf->transformed_map[i][j].x = prev_x * cos(TO_RAD(fdf->y_rotate)) + prev_z * sin(TO_RAD(fdf->y_rotate));
-			fdf->transformed_map[i][j].z = -prev_x * sin(TO_RAD(fdf->y_rotate)) + prev_z * cos(TO_RAD(fdf->y_rotate));
+			prev_x = fdf->trans_map[i][j].x - fdf->map_width / 2;
+			prev_z = fdf->trans_map[i][j].z;
+			fdf->trans_map[i][j].x = prev_x * cos(TO_RAD(fdf->y_rotate))
+			+ prev_z * sin(TO_RAD(fdf->y_rotate));
+			fdf->trans_map[i][j].z = -prev_x * sin(TO_RAD(fdf->y_rotate))
+			+ prev_z * cos(TO_RAD(fdf->y_rotate));
 		}
 	}
 	return (1);
@@ -69,10 +73,12 @@ int8_t		rotate_z(t_fdf *fdf)
 		j = -1;
 		while (++j < fdf->map_width)
 		{
-			prev_x = fdf->transformed_map[i][j].x;
-			prev_y = fdf->transformed_map[i][j].y;
-			fdf->transformed_map[i][j].x = prev_x * cos(TO_RAD(fdf->z_rotate)) - prev_y * sin(TO_RAD(fdf->z_rotate));
-			fdf->transformed_map[i][j].y = prev_x * sin(TO_RAD(fdf->z_rotate)) + prev_y * cos(TO_RAD(fdf->z_rotate));
+			prev_x = fdf->trans_map[i][j].x;
+			prev_y = fdf->trans_map[i][j].y;
+			fdf->trans_map[i][j].x = prev_x * cos(TO_RAD(fdf->z_rotate))
+			- prev_y * sin(TO_RAD(fdf->z_rotate));
+			fdf->trans_map[i][j].y = prev_x * sin(TO_RAD(fdf->z_rotate))
+			+ prev_y * cos(TO_RAD(fdf->z_rotate));
 		}
 	}
 	return (1);
