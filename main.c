@@ -76,7 +76,6 @@ void				draw_map(t_fdf *fdf)
 int					exit_function(void *param)
 {
 	(void)param;
-	system("leaks fdf");
 	exit(0);
 	return (0);
 }
