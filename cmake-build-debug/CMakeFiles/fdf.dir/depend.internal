@@ -17,6 +17,14 @@ CMakeFiles/fdf.dir/matrix.c.o
  /Users/kpshenyc/projects/fdf/libftprintf/libft/libft.h
  /Users/kpshenyc/projects/fdf/matrix.c
  /usr/local/include/mlx.h
+CMakeFiles/fdf.dir/projections.c.o
+ /Users/kpshenyc/projects/fdf/fdf.h
+ /Users/kpshenyc/projects/fdf/libftprintf/gnl/get_next_line.h
+ /Users/kpshenyc/projects/fdf/libftprintf/includes/ft_printf.h
+ /Users/kpshenyc/projects/fdf/libftprintf/libft/includes/type_limits.h
+ /Users/kpshenyc/projects/fdf/libftprintf/libft/libft.h
+ /Users/kpshenyc/projects/fdf/projections.c
+ /usr/local/include/mlx.h
 CMakeFiles/fdf.dir/read_map.c.o
  /Users/kpshenyc/projects/fdf/fdf.h
  /Users/kpshenyc/projects/fdf/libftprintf/gnl/get_next_line.h
@@ -32,4 +40,12 @@ CMakeFiles/fdf.dir/rotations.c.o
  /Users/kpshenyc/projects/fdf/libftprintf/libft/includes/type_limits.h
  /Users/kpshenyc/projects/fdf/libftprintf/libft/libft.h
  /Users/kpshenyc/projects/fdf/rotations.c
+ /usr/local/include/mlx.h
+CMakeFiles/fdf.dir/utils.c.o
+ /Users/kpshenyc/projects/fdf/fdf.h
+ /Users/kpshenyc/projects/fdf/libftprintf/gnl/get_next_line.h
+ /Users/kpshenyc/projects/fdf/libftprintf/includes/ft_printf.h
+ /Users/kpshenyc/projects/fdf/libftprintf/libft/includes/type_limits.h
+ /Users/kpshenyc/projects/fdf/libftprintf/libft/libft.h
+ /Users/kpshenyc/projects/fdf/utils.c
  /usr/local/include/mlx.h

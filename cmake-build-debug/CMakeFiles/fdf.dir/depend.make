@@ -17,6 +17,14 @@ CMakeFiles/fdf.dir/matrix.c.o: ../libftprintf/libft/libft.h
 CMakeFiles/fdf.dir/matrix.c.o: ../matrix.c
 CMakeFiles/fdf.dir/matrix.c.o: /usr/local/include/mlx.h
 
+CMakeFiles/fdf.dir/projections.c.o: ../fdf.h
+CMakeFiles/fdf.dir/projections.c.o: ../libftprintf/gnl/get_next_line.h
+CMakeFiles/fdf.dir/projections.c.o: ../libftprintf/includes/ft_printf.h
+CMakeFiles/fdf.dir/projections.c.o: ../libftprintf/libft/includes/type_limits.h
+CMakeFiles/fdf.dir/projections.c.o: ../libftprintf/libft/libft.h
+CMakeFiles/fdf.dir/projections.c.o: ../projections.c
+CMakeFiles/fdf.dir/projections.c.o: /usr/local/include/mlx.h
+
 CMakeFiles/fdf.dir/read_map.c.o: ../fdf.h
 CMakeFiles/fdf.dir/read_map.c.o: ../libftprintf/gnl/get_next_line.h
 CMakeFiles/fdf.dir/read_map.c.o: ../libftprintf/includes/ft_printf.h
@@ -32,4 +40,12 @@ CMakeFiles/fdf.dir/rotations.c.o: ../libftprintf/libft/includes/type_limits.h
 CMakeFiles/fdf.dir/rotations.c.o: ../libftprintf/libft/libft.h
 CMakeFiles/fdf.dir/rotations.c.o: ../rotations.c
 CMakeFiles/fdf.dir/rotations.c.o: /usr/local/include/mlx.h
+
+CMakeFiles/fdf.dir/utils.c.o: ../fdf.h
+CMakeFiles/fdf.dir/utils.c.o: ../libftprintf/gnl/get_next_line.h
+CMakeFiles/fdf.dir/utils.c.o: ../libftprintf/includes/ft_printf.h
+CMakeFiles/fdf.dir/utils.c.o: ../libftprintf/libft/includes/type_limits.h
+CMakeFiles/fdf.dir/utils.c.o: ../libftprintf/libft/libft.h
+CMakeFiles/fdf.dir/utils.c.o: ../utils.c
+CMakeFiles/fdf.dir/utils.c.o: /usr/local/include/mlx.h
 

@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fdf.dir/main.c.o"
   "CMakeFiles/fdf.dir/matrix.c.o"
+  "CMakeFiles/fdf.dir/projections.c.o"
   "CMakeFiles/fdf.dir/read_map.c.o"
   "CMakeFiles/fdf.dir/rotations.c.o"
+  "CMakeFiles/fdf.dir/utils.c.o"
   "fdf.pdb"
   "fdf"
 )

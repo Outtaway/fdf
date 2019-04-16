@@ -43,6 +43,8 @@
 #  define C_KEY 99
 # else
 #  define ESC 53
+#  define NUM7 89
+#  define NUM9 92
 #  define NUM4 86
 #  define NUM8 91
 #  define NUM6 88
@@ -59,6 +61,7 @@
 #  define G_KEY 5
 #  define N_KEY 45
 #  define M_KEY 46
+#  define R_KEY 15
 # endif
 
 # define SHIFT_STEP 5
@@ -68,9 +71,11 @@
 # define TO_RAD(angle) ((double)((double)(angle) * acos(-1.0f) / 180.0))
 # define TRMAP(i, j) (fdf->trans_map[i][j])
 # define CLMP(i) (fdf->clip_matr[i])
+# define ERROR_EXIT(msg) { write(2, msg, ft_strlen(msg)); exit(EXIT_FAILURE); }
+# define CL_ROT { fdf->x_rotate = 0; fdf->y_rotate = 0; fdf->z_rotate = 0; }
 
 enum	e_projection_type {
-	ISOMETRIC, PERSPECTIVE
+	ISOMETRIC, PARALLEL, PERSPECTIVE
 };
 
 typedef struct		s_point_2d
@@ -122,18 +127,29 @@ typedef struct		s_fdf
 	double			x_rotate;
 	double			y_rotate;
 	double			z_rotate;
+	int8_t			(*projections[3])(struct s_fdf*);
 	int8_t			projection;
 	t_camera		camera;
 	double			clip_matr[16];
 
 }					t_fdf;
 
+int8_t				isometric_proj(t_fdf *fdf);
+int8_t				parallel_proj(t_fdf *fdf);
+int8_t				perspective_proj(t_fdf *fdf);
+
 void				read_map(char *file_name, t_fdf *fdf);
+void				init_fdf(t_fdf *fdf);
 int8_t				rotate_x(t_fdf *fdf);
 int8_t				rotate_y(t_fdf *fdf);
 int8_t				rotate_z(t_fdf *fdf);
-void				copy_map(t_fdf *fdf);
 void				set_up_clip_matr(t_fdf *fdf);
 void				mult_clip_matr_on_points(t_fdf *fdf);
 void				transform_to_2d(t_fdf *fdf);
+
+int8_t				rotations_keys(int key, t_fdf *fdf);
+int8_t				scale_or_colors_keys(int key, t_fdf *fdf);
+int8_t				shift_keys(int key, t_fdf *fdf);
+void				copy_map(t_fdf *fdf);
+
 #endif

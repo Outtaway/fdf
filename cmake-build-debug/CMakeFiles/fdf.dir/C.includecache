@@ -50,19 +50,7 @@ unistd.h
 includes/type_limits.h
 /Users/kpshenyc/projects/fdf/libftprintf/libft/includes/type_limits.h
 
-/Users/kpshenyc/projects/fdf/main.c
-fdf.h
-/Users/kpshenyc/projects/fdf/fdf.h
-
-/Users/kpshenyc/projects/fdf/matrix.c
-fdf.h
-/Users/kpshenyc/projects/fdf/fdf.h
-
 /Users/kpshenyc/projects/fdf/read_map.c
-fdf.h
-/Users/kpshenyc/projects/fdf/fdf.h
-
-/Users/kpshenyc/projects/fdf/rotations.c
 fdf.h
 /Users/kpshenyc/projects/fdf/fdf.h
 

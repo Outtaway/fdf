@@ -177,6 +177,33 @@ matrix.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/matrix.c.s
 .PHONY : matrix.c.s
 
+projections.o: projections.c.o
+
+.PHONY : projections.o
+
+# target to build an object file
+projections.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/projections.c.o
+.PHONY : projections.c.o
+
+projections.i: projections.c.i
+
+.PHONY : projections.i
+
+# target to preprocess a source file
+projections.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/projections.c.i
+.PHONY : projections.c.i
+
+projections.s: projections.c.s
+
+.PHONY : projections.s
+
+# target to generate assembly for a file
+projections.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/projections.c.s
+.PHONY : projections.c.s
+
 read_map.o: read_map.c.o
 
 .PHONY : read_map.o
@@ -231,6 +258,33 @@ rotations.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/rotations.c.s
 .PHONY : rotations.c.s
 
+utils.o: utils.c.o
+
+.PHONY : utils.o
+
+# target to build an object file
+utils.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/utils.c.o
+.PHONY : utils.c.o
+
+utils.i: utils.c.i
+
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/utils.c.i
+.PHONY : utils.c.i
+
+utils.s: utils.c.s
+
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/utils.c.s
+.PHONY : utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,12 +300,18 @@ help:
 	@echo "... matrix.o"
 	@echo "... matrix.i"
 	@echo "... matrix.s"
+	@echo "... projections.o"
+	@echo "... projections.i"
+	@echo "... projections.s"
 	@echo "... read_map.o"
 	@echo "... read_map.i"
 	@echo "... read_map.s"
 	@echo "... rotations.o"
 	@echo "... rotations.i"
 	@echo "... rotations.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 

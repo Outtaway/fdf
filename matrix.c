@@ -23,9 +23,9 @@ void	mult_clip_matr_on_points(t_fdf *fdf)
 		j = -1;
 		while (++j < fdf->map_width)
 		{
-			fdf->trans_map[i][j].x = TRMAP(i, j).x * fdf->clip_matr[0]
-			+ TRMAP(i, j).y * fdf->clip_matr[4] +
-			TRMAP(i, j).z * fdf->clip_matr[8] + TRMAP(i, j).w * CLMP(12);
+			fdf->trans_map[i][j].x = TRMAP(i, j).x * CLMP(0)
+			+ TRMAP(i, j).y * CLMP(4) +
+			TRMAP(i, j).z * CLMP(8) + TRMAP(i, j).w * CLMP(12);
 			TRMAP(i, j).y = TRMAP(i, j).x * CLMP(1)
 			+ TRMAP(i, j).y * CLMP(5) + TRMAP(i, j).z * CLMP(9) + TRMAP(i, j).w
 			* CLMP(13);

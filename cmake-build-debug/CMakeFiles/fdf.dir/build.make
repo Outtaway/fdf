@@ -83,9 +83,22 @@ CMakeFiles/fdf.dir/matrix.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/matrix.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kpshenyc/projects/fdf/matrix.c -o CMakeFiles/fdf.dir/matrix.c.s
 
+CMakeFiles/fdf.dir/projections.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/projections.c.o: ../projections.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/fdf.dir/projections.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/projections.c.o   -c /Users/kpshenyc/projects/fdf/projections.c
+
+CMakeFiles/fdf.dir/projections.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/projections.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kpshenyc/projects/fdf/projections.c > CMakeFiles/fdf.dir/projections.c.i
+
+CMakeFiles/fdf.dir/projections.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/projections.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kpshenyc/projects/fdf/projections.c -o CMakeFiles/fdf.dir/projections.c.s
+
 CMakeFiles/fdf.dir/read_map.c.o: CMakeFiles/fdf.dir/flags.make
 CMakeFiles/fdf.dir/read_map.c.o: ../read_map.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/fdf.dir/read_map.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fdf.dir/read_map.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/read_map.c.o   -c /Users/kpshenyc/projects/fdf/read_map.c
 
 CMakeFiles/fdf.dir/read_map.c.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/fdf.dir/read_map.c.s: cmake_force
 
 CMakeFiles/fdf.dir/rotations.c.o: CMakeFiles/fdf.dir/flags.make
 CMakeFiles/fdf.dir/rotations.c.o: ../rotations.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fdf.dir/rotations.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/fdf.dir/rotations.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/rotations.c.o   -c /Users/kpshenyc/projects/fdf/rotations.c
 
 CMakeFiles/fdf.dir/rotations.c.i: cmake_force
@@ -109,25 +122,42 @@ CMakeFiles/fdf.dir/rotations.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/rotations.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kpshenyc/projects/fdf/rotations.c -o CMakeFiles/fdf.dir/rotations.c.s
 
+CMakeFiles/fdf.dir/utils.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/utils.c.o: ../utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/fdf.dir/utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/utils.c.o   -c /Users/kpshenyc/projects/fdf/utils.c
+
+CMakeFiles/fdf.dir/utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/utils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kpshenyc/projects/fdf/utils.c > CMakeFiles/fdf.dir/utils.c.i
+
+CMakeFiles/fdf.dir/utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/utils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kpshenyc/projects/fdf/utils.c -o CMakeFiles/fdf.dir/utils.c.s
+
 # Object files for target fdf
 fdf_OBJECTS = \
 "CMakeFiles/fdf.dir/main.c.o" \
 "CMakeFiles/fdf.dir/matrix.c.o" \
+"CMakeFiles/fdf.dir/projections.c.o" \
 "CMakeFiles/fdf.dir/read_map.c.o" \
-"CMakeFiles/fdf.dir/rotations.c.o"
+"CMakeFiles/fdf.dir/rotations.c.o" \
+"CMakeFiles/fdf.dir/utils.c.o"
 
 # External object files for target fdf
 fdf_EXTERNAL_OBJECTS =
 
 fdf: CMakeFiles/fdf.dir/main.c.o
 fdf: CMakeFiles/fdf.dir/matrix.c.o
+fdf: CMakeFiles/fdf.dir/projections.c.o
 fdf: CMakeFiles/fdf.dir/read_map.c.o
 fdf: CMakeFiles/fdf.dir/rotations.c.o
+fdf: CMakeFiles/fdf.dir/utils.c.o
 fdf: CMakeFiles/fdf.dir/build.make
 fdf: /usr/local/lib/libmlx.a
 fdf: ../libftprintf/libftprintf.a
 fdf: CMakeFiles/fdf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable fdf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable fdf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fdf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

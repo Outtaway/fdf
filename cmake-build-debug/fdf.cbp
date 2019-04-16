@@ -88,10 +88,16 @@
 		<Unit filename="/Users/kpshenyc/projects/fdf/matrix.c">
 			<Option target="fdf"/>
 		</Unit>
+		<Unit filename="/Users/kpshenyc/projects/fdf/projections.c">
+			<Option target="fdf"/>
+		</Unit>
 		<Unit filename="/Users/kpshenyc/projects/fdf/read_map.c">
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/kpshenyc/projects/fdf/rotations.c">
+			<Option target="fdf"/>
+		</Unit>
+		<Unit filename="/Users/kpshenyc/projects/fdf/utils.c">
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/kpshenyc/projects/fdf/CMakeLists.txt">

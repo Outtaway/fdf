@@ -108,5 +108,6 @@ char				*ft_128itoa_base(__uint128_t value, char *base);
 int					ft_128value_width(__uint128_t value, int base);
 void				free_array(char ***array);
 int					ft_lstsize(t_list *lst);
+void				clear_list(t_list *list);
 
 #endif

@@ -115,6 +115,7 @@ SRC = srcs/additional_func.c\
 	libft/ft_value_width.c\
 	libft/free_array.c\
 	libft/ft_lstsize.c\
+	libft/clear_list.c\
 
 GNL=gnl/get_next_line.c
 
@@ -206,6 +207,7 @@ SRO = additional_func.o\
 	free_array.o\
 	get_next_line.o\
 	ft_lstsize.o\
+	clear_list.o\
 
 all: $(NAME)
 

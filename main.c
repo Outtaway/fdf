@@ -73,40 +73,9 @@ void				draw_map(t_fdf *fdf)
 	}
 }
 
-int8_t				isometric_proj(t_fdf *fdf)
-{
-	int32_t		i;
-	int32_t		j;
-	double		prev_x;
-	double		prev_y;
-
-	i = -1;
-	while (++i < fdf->map_height)
-	{
-		j = -1;
-		while (++j < fdf->map_width)
-		{
-			prev_x = fdf->trans_map[i][j].x;
-			prev_y = fdf->trans_map[i][j].y;
-			fdf->trans_map[i][j].x = (prev_x - prev_y) * cos(0.523599) +
-			fdf->shift_x + (prev_x * fdf->scale);
-			fdf->trans_map[i][j].y = (prev_x + prev_y) * sin(0.523599) -
-			fdf->trans_map[i][j].z + fdf->shift_y + (prev_y * fdf->scale);
-		}
-	}
-	return (1);
-}
-
-int8_t				perspective_proj(t_fdf *fdf)
-{
-	set_up_clip_matr(fdf);
-	mult_clip_matr_on_points(fdf);
-	transform_to_2d(fdf);
-	return (1);
-}
-
 int					exit_function(void *param)
 {
+	(void)param;
 	system("leaks fdf");
 	exit(0);
 	return (0);
@@ -118,45 +87,23 @@ int					key_handler(int key, void *param)
 
 	fdf = (t_fdf *)param;
 	copy_map(fdf);
-	ft_memset(((t_fdf *)param)->img_data, 0,
-		WIN_HEIGHT * WIN_WIDTH * (fdf->bpp / 8));
-	if (key == ESC)
+	ft_memset(fdf->img_data, 0, WIN_HEIGHT * WIN_WIDTH * (fdf->bpp / 8));
+	if (key == R_KEY)
+		init_fdf(fdf);
+	else if (key == ESC)
 		exit_function(NULL);
 	else if (key == P_KEY)
-		fdf->projection = (fdf->projection == ISOMETRIC) ?
-			PERSPECTIVE : ISOMETRIC;
-	else if (key == NUM8)
-		fdf->x_rotate += ROTATE_STEP;
-	else if (key == NUM2)
-		fdf->x_rotate -= ROTATE_STEP;
-	else if (key == NUM6)
-		fdf->y_rotate += ROTATE_STEP;
-	else if (key == NUM4)
-		fdf->y_rotate -= ROTATE_STEP;
-	else if (key == LEFT_ARROW)
-		fdf->shift_x -= SHIFT_STEP;
-	else if (key == RIGHT_ARROW)
-		fdf->shift_x += SHIFT_STEP;
-	else if (key == UP_ARROW)
-		fdf->shift_y -= SHIFT_STEP;
-	else if (key == DOWN_ARROW)
-		fdf->shift_y += SHIFT_STEP;
-	else if (key == PLUS && fdf->projection == ISOMETRIC)
-		fdf->scale += 5;
-	else if (key == PLUS && fdf->projection == PERSPECTIVE)
-		fdf->camera.fov < 110 ? fdf->camera.fov += 5 : 0;
-	else if (key == MINUS && fdf->projection == ISOMETRIC)
-		(fdf->scale) > 5 && (fdf->scale -= 5);
-	else if (key == MINUS && fdf->projection == PERSPECTIVE)
-		fdf->camera.fov > 50 ? fdf->camera.fov -= 5 : 0;
-	else if (key == C_KEY)
-		if (++g_color > MAX_COLORS - 1)
-			g_color = 0;
+		fdf->projection += fdf->projection == 2 ? -2 : 1;
+	else if (rotations_keys(key, fdf))
+		;
+	else if (scale_or_colors_keys(key, fdf))
+		;
+	else if (shift_keys(key, fdf))
+		;
 	rotate_x(fdf);
 	rotate_y(fdf);
 	rotate_z(fdf);
-	fdf->projection == ISOMETRIC ? isometric_proj(fdf) :
-		perspective_proj(fdf);
+	(fdf->projections[fdf->projection])(fdf);
 	mlx_clear_window(fdf->mlx, fdf->win);
 	draw_map(fdf);
 	mlx_put_image_to_window(fdf->mlx, fdf->win, fdf->img, 0, 0);

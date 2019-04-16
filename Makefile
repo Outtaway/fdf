@@ -3,7 +3,7 @@
 CC=clang
 FLAGS=-Wextra -Wall -Werror
 NAME=fdf
-FILENAMES=main read_map rotations matrix
+FILENAMES=main read_map rotations matrix projections utils
 SRCS=$(addsuffix .c,$(FILENAMES))
 OBJS=$(addsuffix .o,$(FILENAMES))
 FRAMEWORKS= -framework OpenGL -framework AppKit -lmlx
@@ -26,3 +26,5 @@ clean:
 fclean: clean
 	make fclean -C libftprintf
 	/bin/rm -f $(NAME)
+
+re: fclean all

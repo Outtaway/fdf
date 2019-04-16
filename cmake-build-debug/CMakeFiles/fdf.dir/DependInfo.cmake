@@ -6,8 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/kpshenyc/projects/fdf/main.c" "/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles/fdf.dir/main.c.o"
   "/Users/kpshenyc/projects/fdf/matrix.c" "/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles/fdf.dir/matrix.c.o"
+  "/Users/kpshenyc/projects/fdf/projections.c" "/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles/fdf.dir/projections.c.o"
   "/Users/kpshenyc/projects/fdf/read_map.c" "/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles/fdf.dir/read_map.c.o"
   "/Users/kpshenyc/projects/fdf/rotations.c" "/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles/fdf.dir/rotations.c.o"
+  "/Users/kpshenyc/projects/fdf/utils.c" "/Users/kpshenyc/projects/fdf/cmake-build-debug/CMakeFiles/fdf.dir/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "Clang")
 
