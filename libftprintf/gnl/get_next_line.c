@@ -6,7 +6,7 @@
 /*   By: kpshenyc <kpshenyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 10:19:29 by kpshenyc          #+#    #+#             */
-/*   Updated: 2019/03/07 14:22:03 by kpshenyc         ###   ########.fr       */
+/*   Updated: 2019/06/13 18:00:22 by kpshenyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ int		get_next_line(const int fd, char **line, const int buff_size)
 	char		*slash;
 	char		*temp;
 
-	SHIT2;
+	GNL1;
 	while (1)
 	{
 		if ((slash = ft_strchr(temp, '\n')) != NULL)
 		{
 			*line = ft_strsub(temp, 0, ft_strlen(temp) - ft_strlen(slash));
-			SHIT4;
+			GNL3;
 		}
 		if ((end = read(fd, buff, buff_size)) <= 0)
 		{
